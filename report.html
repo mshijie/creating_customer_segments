@@ -20894,11 +20894,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAJgX/x+3DpfpJKZ2wAAAAABJRU5ErkJggg==
 <p>第一个和第二个主成分表示了70.6%的方差。前四个主成分表示了93.1%的方差。</p>
 <p>PCA的新特征是原来6个特征的线性加权和。对于PCA一个主成分，weight的绝对大小越大，原特征和这个维度相关度越大。在某一主成分中，对于不同原特征，若它们为同号，则说明他们有正相关性；若为异号，则说明它们是负相关性。</p>
 <p>我之前的回答，尝试从新的特征增长的角度来分析问题，比如Dimension1增加，Detergents_Paper，Grocery，Milk三个特征负相关，都会减少。现在意识到，新特征的正负并不重要，它只是一个数学表示。正确的分析应该是关注在一个新特征内部，各个原特征的重要程度和相关关系。</p>
+<p>另外为觉得这里中文翻译有问题。英文原文是"Using the visualization provided above, discuss what the first four dimensions best represent <strong>in terms of customer spending</strong>."。讨论的重点customer speeding，而不是<strong>代表哪一种类型的客户</strong>。这可能也是我之前误解的原因。我之前考虑的是在一个主成分上<strong>正数值较大</strong>的点表示什么用户。Dim1和Dim2主要特征都是正相关的，表示为一类客户还可以理解；但是Dim3，和Dim4，主要特征是负相关的；只能说在这个主成分上，捕捉了用户的一种消费行为。在主成分轴上也有正轴和负轴，在两个方向都可以分布数据点；这肯定不能代表<strong>一类客户</strong>。</p>
 <ul>
-<li>Dimension1：Detergents_Paper，Grocery， Milk三个特征有最高的权重。且同号正相关。买更多的Detergents_Paper，也就会购买更多的Grocery，Milk。这类客户行为更应该是杂货店／零售商。</li>
-<li>Dimension2：Fresh，Frozen，Delicatessen三个特征的有最高的权重。且同号正相关。买更多的Fresh，也就会购买更多的Frozen，Delicatessen。这类客户应该是三种食品购买量都比较大的餐饮行业客户。</li>
-<li>Dimension3：Fresh，Frozen，Delicatessen三个特征的有最高的权重。Fresh和Frozen，Delicatessen负相关。买更多的Fresh也就买更少Frozen，Delicatessen。买更多的Frozen，也就买更少的Fresh。这应该餐饮行业的特殊客户。</li>
-<li>Dimension4：Frozen，Delicatessen，Fresh三个特征的有最高的权重。Frozen和Delicatessen，Fresh。买更多的Frozen，也就买更少的Delicatessen，Fresh。这应该还是餐饮行业的特殊客户。</li>
+<li>Dimension1：Detergents_Paper，Grocery， Milk三个特征有最高的权重。且同号正相关。买更多的Detergents_Paper，也就会购买更多的Grocery，Milk。</li>
+<li>Dimension2：Fresh，Frozen，Delicatessen三个特征的有最高的权重。且同号正相关。买更多的Fresh，也就会购买更多的Frozen，Delicatessen。</li>
+<li>Dimension3：Fresh，Frozen，Delicatessen三个特征的有最高的权重。Fresh和Frozen，Delicatessen负相关。买更多的Fresh也就买更少Frozen，Delicatessen。买更多的Frozen，也就买更少的Fresh。</li>
+<li>Dimension4：Frozen，Delicatessen，Fresh三个特征的有最高的权重。Frozen和Delicatessen，Fresh。买更多的Frozen，也就买更少的Delicatessen，Fresh。</li>
 </ul>
 <p><strong>引用上一个reviewer的回答</strong></p>
 
